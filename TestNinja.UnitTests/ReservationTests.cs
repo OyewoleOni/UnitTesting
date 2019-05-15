@@ -32,7 +32,7 @@ namespace TestNinja.UnitTests
             var result = reservation.CanBeCancelledBy(user);
 
             // Assert
-            Assert.IsTrue(result);
+            Assert.That(result, Is.True);
         }
         [Test]
         public void CanBeCancelledBy_AnotherUserCancellingReservation_ReturnsFallse()
@@ -45,7 +45,7 @@ namespace TestNinja.UnitTests
             var result = reservation.CanBeCancelledBy(new User());
 
             // Assert
-            Assert.IsFalse(result);
+            Assert.That(result, Is.False);
         }
     }
 }
