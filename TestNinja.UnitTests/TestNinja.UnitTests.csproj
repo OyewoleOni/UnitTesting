@@ -53,6 +53,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerConhtrollerTest.cs" />
+    <Compile Include="ErrorLogerTest.cs" />
+    <Compile Include="HtmlFormatterTests.cs" />
     <Compile Include="MathTest.cs" />
     <Compile Include="ReservationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
