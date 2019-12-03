@@ -56,11 +56,14 @@
     <Compile Include="CustomerConhtrollerTest.cs" />
     <Compile Include="DemeritPointsCalculatorTests.cs" />
     <Compile Include="ErrorLogerTest.cs" />
+    <Compile Include="FakeFileReader.cs" />
     <Compile Include="FizzBuzzTest.cs" />
     <Compile Include="HtmlFormatterTests.cs" />
     <Compile Include="MathTest.cs" />
+    <Compile Include="Mocking\VideoServiceTest.cs" />
     <Compile Include="ReservationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StackTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
