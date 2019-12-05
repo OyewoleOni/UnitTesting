@@ -1,4 +1,5 @@
 ﻿using System;
+using Autofac;
 
 namespace DependencyInjectionCore
 {
@@ -6,7 +7,13 @@ namespace DependencyInjectionCore
     {
         static void Main(string[] args)
         {
-            var notificationService = new ConsoleNotification();
+            var containerBuilder = new ContainerBuilder();
+            containerBuilder.RegisterType<ConsoleNotification>().As<INotification>();
+            var container = containerBuilder.Build();
+
+            var notificationService = container.Resolve<INotification>();
+
+           // var notificationService = new ConsoleNotification();
 
             var user1 = new User("Tim", notificationService);
             user1.ChangeUserName("Robert");
