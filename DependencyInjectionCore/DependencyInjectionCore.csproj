@@ -6,7 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="INotification.cs" />
+    <Compile Remove="User.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Autofac" Version="4.9.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DependencyInjection.Init\DependencyInjection.Init.csproj" />
+    <ProjectReference Include="..\DependencyInjection.Notification\DependencyInjection.Notification.csproj" />
   </ItemGroup>
 
 </Project>

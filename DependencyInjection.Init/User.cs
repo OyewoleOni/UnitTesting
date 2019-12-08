@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DependencyInjectionCore
+namespace DependencyInjection.Init
 {
-   internal class User
+   public class User
    {
         public User(string name)
         {

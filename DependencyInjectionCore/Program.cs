@@ -1,5 +1,7 @@
 ﻿using System;
 using Autofac;
+using DependencyInjection.Init;
+using DependencyInjection.Notification;
 
 namespace DependencyInjectionCore
 {
@@ -8,15 +10,17 @@ namespace DependencyInjectionCore
         static void Main(string[] args)
         {
             var containerBuilder = new ContainerBuilder();
-            containerBuilder.RegisterType<ConsoleNotification>().As<INotification>();
+            containerBuilder.RegisterModule<ProgramModule>();
+
             var container = containerBuilder.Build();
 
             var notificationService = container.Resolve<INotification>();
 
-           // var notificationService = new ConsoleNotification();
 
-            var user1 = new User("Tim", notificationService);
-            user1.ChangeUserName("Robert");
+            UserService userService = container.Resolve<UserService>();
+
+            var user1 = new User("Tim");
+            userService.ChangeUserName(user1, "test");
 
             // Console.WriteLine("Hello World!");
 
