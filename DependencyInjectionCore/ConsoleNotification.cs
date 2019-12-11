@@ -10,7 +10,7 @@ namespace DependencyInjectionCore
     {
         public void NotifyUsernameChanged(User user)
         {
-            Console.WriteLine($"Username has been channged to: {user.Username}");
+            Console.WriteLine($"Username has been changed to: {user.Username}");
         }
     }
 }
